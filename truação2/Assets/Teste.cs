@@ -1,0 +1,23 @@
+using UnityEditor;
+using UnityEngine;
+
+public class Teste : MonoBehaviour
+{
+  private Carro fusca = new Carro();
+  private Carro gol = new Carro();
+  
+  private void Start()
+  {
+    fusca.setNome("Fusca de Pai");
+    fusca.setCor("Verde");
+    fusca.setNumero_de_rodas(4);
+    fusca.setPreco(2050.90f);
+    Debug.Log(fusca.getNome() + " é " + fusca.getCor() + ", vale " + fusca.getPreco() + " e tem " + fusca.getNumero_de_rodas() + " rodas ");
+    
+    gol.setNomeDoCarro("Gol Trulimero");
+    gol.setCor("Rosa");
+    gol.setNumero_de_rodas(4);
+    gol.setPreco(5000.50f);
+    Debug.Log("0 "+ gol.getNomeDoCarro() + " é " + gol.getCor() + ", vale " + gol.getPreco() + " e tem " + gol.getNumero_de_rodas() + " rodas ");
+  }
+}
