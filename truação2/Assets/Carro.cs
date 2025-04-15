@@ -7,7 +7,7 @@ public class Carro
    int numero_de_rodas;
    private string cor;
    private float preco;
-   private string nomeDoCarro;
+   private string nomedocarro;
 
    public string getNome()
    {
@@ -53,14 +53,14 @@ public class Carro
    }
    
    
- public string getNomeDoCarro()
+ public string getNomedocarro()
    {
-      return this.nomeDoCarro;
+      return this.nomedocarro;
    }
 
-   public void setNumero_de_rodas(string nomeDoCarro)
+   public void setNomedocarro(string nomedocarro)
    {
-      this.nomeDoCarro = nomeDoCarro;
+      this.nomedocarro = nomedocarro;
    }
 
 

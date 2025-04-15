@@ -14,10 +14,10 @@ public class Teste : MonoBehaviour
     fusca.setPreco(2050.90f);
     Debug.Log(fusca.getNome() + " é " + fusca.getCor() + ", vale " + fusca.getPreco() + " e tem " + fusca.getNumero_de_rodas() + " rodas ");
     
-    gol.setNomeDoCarro("Gol Trulimero");
+    gol.setNomedocarro("Gol Trulimero");
     gol.setCor("Rosa");
     gol.setNumero_de_rodas(4);
     gol.setPreco(5000.50f);
-    Debug.Log("0 "+ gol.getNomeDoCarro() + " é " + gol.getCor() + ", vale " + gol.getPreco() + " e tem " + gol.getNumero_de_rodas() + " rodas ");
+    Debug.Log("0 "+ gol.getNomedocarro() + " é " + gol.getCor() + ", vale " + gol.getPreco() + " e tem " + gol.getNumero_de_rodas() + " rodas ");
   }
 }
