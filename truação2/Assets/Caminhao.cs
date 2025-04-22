@@ -4,12 +4,12 @@ public class Caminhao : Carro
 {
     private string tipoDeCarroceria;
 
-    public void AtribuirTipoDeCarroceria(string tipoDeCarroceria)
+    public void setTipoDeCarroceria(string tipoDeCarroceria)
     {
         this.tipoDeCarroceria = tipoDeCarroceria;
     }
 
-    public string ObterTipoDeCarroceria()
+    public string getTipoDeCarroceria()
     {
         return tipoDeCarroceria;
     }
