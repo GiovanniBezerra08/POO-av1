@@ -1,30 +1,58 @@
- using UnityEditor;
 using UnityEngine;
-
 public class Teste : MonoBehaviour
-{
-  private Carro fusca = new Carro();
-  private Carro gol = new Carro();
-  private Caminhao caminhao = new Caminhao();
-  private void Start()
-  {
-    fusca.setNome("Fusca de Pai");
-    fusca.setCor("verde");
-    fusca.setNumero_de_rodas(4);
-    fusca.setPreco(2050.90f);
-    Debug.Log(fusca.getNome() + " é " + fusca.getCor() + ", vale " + fusca.getPreco() + " e tem " + fusca.getNumero_de_rodas() + " rodas ");
+{ 
+    Carro fusca = new Carro();
+    Carro gol = new Carro();
     
-    gol.setNomedocarro("Gol Trulimero");
-    gol.setCor("rosa");
-    gol.setNumero_de_rodas(4);
-    gol.setPreco(5000.50f);
-    Debug.Log("0 "+ gol.getNomedocarro() + " é " + gol.getCor() + ", vale " + gol.getPreco() + " e tem " + gol.getNumero_de_rodas() + " rodas ");
+    Caminhao caminhao = new Caminhao();
     
-    caminhao.setNomedocarro("Giga");
-    caminhao.setCor("azul");
-    caminhao.setNumero_de_rodas(6);
-    caminhao.setPreco(8000f);
-    caminhao.setTipoDeCarroceria(5000.50f);
-    Debug.Log("0 "+ caminhao.getNomedocarro() + " é " + caminhao.getCor() + ", vale " + caminhao.getPreco() + " e tem " + caminhao.getNumero_de_rodas() + " rodas ") + caminhao.getTipoDeCarroceria() + " carroceria ");  
-  }
+    void Start()
+    {
+        fusca.AtribuirNome("Fusca de Pai");
+        fusca.AtribuirCor("Amarelo");
+        fusca.AtribuirNumero_de_rodas(4);
+        fusca.AtribuirPreco(2050.90f);
+        Debug.Log("O "+ fusca.NomeDoCarro() +" é "+ fusca.CorDoCarro() + " tem " + fusca.Numero_de_rodas()+
+                  " e custa R$"+fusca.Preco());
+        
+        gol.AtribuirNome("Gol do Falstão");
+        gol.AtribuirCor("Verde");
+        gol.AtribuirNumero_de_rodas(4);
+        gol.AtribuirPreco(3000.00f);
+        Debug.Log("O "+ gol.NomeDoCarro());
+
+        if (fusca.ComparePreco(gol))
+        {
+            Debug.Log("O Carro " + fusca.NomeDoCarro() + " é mais caro do que o carro " + gol.NomeDoCarro());
+        }
+        else
+        {
+            Debug.Log("O Carro " + fusca.NomeDoCarro() + " é mais barato do que o carro " + gol.NomeDoCarro());
+        }
+
+        caminhao.AtribuirTipoDeCarroceria("Larga");
+        caminhao.AtribuirNumero_de_rodas(8);
+        caminhao.AtribuirPreco(6000.00f);
+        caminhao.AtribuirCor("Azul");
+        caminhao.AtribuirNome("Caminhão do Falstão");
+        
+        //fusca.AtribuirTipoDeCarroceria("Larga");
+
+        if (fusca.ComparePreco(caminhao))
+        {
+            Debug.Log("O Carro " + fusca.NomeDoCarro() + " é mais caro do que o " + caminhao.NomeDoCarro());
+        }
+        else
+        {
+            Debug.Log("O Carro " + fusca.NomeDoCarro() + " é mais barato do que o " + caminhao.NomeDoCarro());
+        }
+
+        
+        
+        
+    }
+    void Update()
+    {
+        
+    }
 }

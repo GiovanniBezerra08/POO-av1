@@ -1,72 +1,61 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Carro
 {
-   private string nome;
-   int numero_de_rodas;
-   private string cor;
-   private float preco;
-   private string nomedocarro;
+    private string nome;
+    private string cor;
+    private int numero_de_rodas;
+    private float preco;
 
-   public string getNome()
-   {
-      return this.nome;
-   }
+    public void AtribuirNome(string nome)
+    {
+        this.nome = nome;
+    }
 
-
-   public void setNome(string nome)
-   {
-      this.nome = nome;
-   }
-   
-   public string getCor()
-   {
-      return this.cor;
-   }
-
-
-   public void setCor(string cor)
-   {
-      this.cor = cor;
-   }
+    public string NomeDoCarro()
+    {
+        return this.nome;
+    }
    
    
-   public float getPreco()
-   {
-      return this.preco;
-   }
-   public void setPreco (float preco)
-   {
-      this.preco = preco;
-   }
+    public void AtribuirCor(string cor)
+    {
+        this.cor = cor;
+    }
+
+    public string CorDoCarro()
+    {
+        return this.cor;
+    }
+
+    public void AtribuirNumero_de_rodas(int numero_de_rodas)
+    {
+        this.numero_de_rodas = numero_de_rodas;
+    }
+
+    public int Numero_de_rodas()
+    {
+        return this.numero_de_rodas;
+    }
    
-   
-   public int getNumero_de_rodas()
-   {
-      return this.numero_de_rodas;
-   }
+    public void AtribuirPreco(float preco)
+    {
+        this.preco = preco;
+    }
 
-   public void setNumero_de_rodas(int numero_de_rodas)
-   {
-      this.numero_de_rodas = numero_de_rodas;
-   }
-   
-   
- public string getNomedocarro()
-   {
-      return this.nomedocarro;
-   }
+    public float Preco()
+    {
+        return this.preco;
+    }
 
-   public void setNomedocarro(string nomedocarro)
-   {
-      this.nomedocarro = nomedocarro;
-   }
+    public bool ComparePreco( Carro carro )
+    {
+        if (this.preco > carro.Preco())
+        {
+            return true;
+        }
+        return false;
+    }
 
 
-
-
-}   
-
-
-
+}

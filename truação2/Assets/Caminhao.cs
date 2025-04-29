@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class Caminhao : Carro
 {
-    private string tipoDeCarroceria;
-
-    public void setTipoDeCarroceria(string tipoDeCarroceria)
+    private string tipo_de_carroceria;
+    
+    public void AtribuirTipoDeCarroceria(string tipo_de_carroceria)
     {
-        this.tipoDeCarroceria = tipoDeCarroceria;
+        this.tipo_de_carroceria = tipo_de_carroceria;
     }
 
-    public string getTipoDeCarroceria()
+    public string TipoDeCarroceria()
     {
-        return tipoDeCarroceria;
+        return this.tipo_de_carroceria;
     }
+
 }
