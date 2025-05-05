@@ -1,81 +1,105 @@
+using System.Collections;
+using UnityEditor;
 using UnityEngine;
-public class Personagem
+
+public class Personagem : MonoBehaviour
 {
+    [ SerializeField ]
     private string nome;
+    [ SerializeField ]
     private int energia;
+    [ SerializeField ]
     private int forca_ataque;
-    private int forca_pulo;
-    private int velocidade;
+    [ SerializeField ]
+    private float forca_do_pulo;
+    [ SerializeField ]
+    private float velocidade;
+    [ SerializeField ]
     private int numero_de_pes;
+    [ SerializeField ]
     private int numero_de_maos;
 
-    public string getNome()
-    {
-        return nome;
-    }
-
-    public void setNome(string nome)
+    public void AtribuirNome(string nome)
     {
         this.nome = nome;
     }
-    
-    public int getEnergia()
+
+    public string Nome()
     {
-        return energia;
+        return this.nome;
     }
 
-    public void setEnergia(int energia)
+    public void AtribuirEnergia(int energia)
     {
         this.energia = energia;
     }
-    
-    public int getForca_ataque()
+
+    public int Energia()
     {
-        return forca_ataque;
+        return this.energia;
     }
 
-    public void setForca_ataque(int forca_ataque)
+    public void AtribuirForca_Ataque(int forca_ataque)
     {
         this.forca_ataque = forca_ataque;
     }
-    
-    public int getForca_pulo()
+
+    public int Forca_Ataque()
     {
-        return forca_pulo;
+        return this.forca_ataque;
     }
 
-    public void setForca_pulo(int forca_pulo)
+    public void AtribuirForca_do_pulo(float forca_do_pulo)
     {
-        this.forca_pulo = forca_pulo;
-    }
-    
-    public int getVelocidade()
-    {
-        return velocidade;
+        this.forca_do_pulo = forca_do_pulo;
     }
 
-    public void setVelocidade(int velocidade)
+    public float Forca_do_pulo()
+    {
+        return this.forca_do_pulo;
+    }
+
+
+    public void AtribuirVelocidade(float velocidade)
     {
         this.velocidade = velocidade;
     }
-    
-    public int getNumero_de_pes()
+
+    public float Velocidade()
     {
-        return numero_de_pes;
+        return this.velocidade;
     }
 
-    public void setNumero_de_pes(int numero_de_pes)
+    public void AtribuitNumero_de_pes(int numero_de_pes)
     {
         this.numero_de_pes = numero_de_pes;
     }
-    
-    public int getNumero_de_maos()
+
+    public int Numero_de_pes()
     {
-        return numero_de_maos;
+        return this.numero_de_pes;
     }
 
-    public void setNumero_de_maos(int numero_de_maos)
+    public void AtribuitNumero_de_maos(int numero_de_maos)
     {
         this.numero_de_maos = numero_de_maos;
+    }
+
+    public int Numero_de_maos()
+    {
+        return this.numero_de_maos;
+    }
+
+
+
+
+
+    void Start()
+    {
+        
+    }
+    void Update()
+    {
+        
     }
 }
