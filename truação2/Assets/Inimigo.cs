@@ -82,4 +82,9 @@ public class Inimigo : Personagem
     {
         
     }
+
+    public float getVelocidade()
+    {
+        throw new System.NotImplementedException();
+    }
 }
